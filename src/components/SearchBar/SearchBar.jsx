@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./SearchBar.css"
 
 export default function SearchBar(props) {
       
@@ -8,9 +9,9 @@ export default function SearchBar(props) {
       setBuscar(event.target.value);
    }
    return (
-      <div>
-         <input type='search' value= {buscar} onChange={handleChange}/>
-         <button onClick={() => props.onSearch(buscar)}>Agregar</button> 
+      <div className="buscador">
+         <input className="input" type='search' value= {buscar} onChange={handleChange}/>
+         <button className="boton" onClick={() => props.onSearch(buscar)}>Agregar</button> 
       </div>
    );
 }

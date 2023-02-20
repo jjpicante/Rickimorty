@@ -3,14 +3,32 @@ import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav'
 import CartaCreador from './components/About/About'
+import Detail from './components/Detail/Detail'
+import Form from './components/Form/Form'
 import styles from './Cartas.module.css'
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 
 function App () {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [access, setAccess] = useState(false);
+  const username = 'jjfiorovic@henry.com';
+  const password = 'juan123';
+
+  const login = (userData) =>{
+      if(userData.password === password && userData.username === username) {
+        setAccess(true);
+        navigate('/home');
+      }
+  }
+    useEffect(() => {
+       !access && navigate('/');
+    }, [access]);
   
   const [characters, setCharacters] = useState([])
-  
+
   const onSearch=(buscar)=>{
     fetch(`https://rickandmortyapi.com/api/character/${buscar}`)
     .then((response) => response.json())
@@ -26,20 +44,23 @@ function App () {
 const onClose = (id) =>{
   setCharacters(characters.filter(personaje => personaje.id !== id))
 }
-  
-  return (
-    <div className='App' style={{ padding: '25px' }}>
-      <Nav onSearch={onSearch} />
-      <Routes>
-        <Route path= "/home" elemnent={<Cards characters={characters} onClose= {onClose}/>}   />
-        <Route path= "/about" element= {<CartaCreador/>} />
-        <Route path= "/detail/:detailId" />
-      </Routes>
-      
-      <Cards characters={characters} onClose= {onClose}/>
-    </div>
-      )
-     }
+return (
+  <div className='App' style={{ padding: '25px' }}>
+     {location.pathname === "/" ? <Form login={login}/> : <Nav onSearch={onSearch} />}
+     <Routes>
+      <Route path= "/home" element={<Cards characters={characters} onClose= {onClose}/>}   />
+      <Route path= "/about" element= {<CartaCreador/>} />
+      <Route path= "/detail/:id" element = {<Detail/>}  />
+    </Routes>
+  </div>
+    )
+   }
+
+   
+
+        
+        
+     
        
     
 
