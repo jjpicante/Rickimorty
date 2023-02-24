@@ -5,20 +5,20 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    switch(action.type){
+    switch (action.type) {
         case ADD_FAVORITE:
-            return{
+            return {
                 ...state,
                 myFavorites: [...state.myFavorites, action.payload]
             }
         case DELETE_FAVORITE:
-            return{
+            return {
                 ...state,
                 myFavorites: state.myFavorites.filter(char => char.id !== action.payload)
-            }    
+            }
 
         default:
-            return {...state}
+            return { ...state }
     }
 }
 

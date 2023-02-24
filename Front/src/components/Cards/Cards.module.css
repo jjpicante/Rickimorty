@@ -1,0 +1,49 @@
+h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:antiquewhite;
+    background-color: #262623c9 ;
+    width: 200px;
+    margin-left: 65px;
+    }
+    
+  
+  .cartas{
+    padding: 0px;
+    margin-bottom: 4em;
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    justify-content: center;
+    
+    }
+
+    .cardsindiv{
+      margin: 50px;
+      border: solid 2px black;
+      border-radius: 20px;
+      background-color: rgb(75, 32, 149);
+      height: 500px;
+      width: 330px;
+      
+      ;
+      
+    }
+    .btn{
+      background: #e030a8;
+      cursor: pointer;
+      border-radius: 50%
+    }
+
+    .btn:hover{
+      background-color: #e6a2d0;
+    }
+    .cardsindiv:hover{
+      background-color: #262623c9;
+    color: beige;
+    }
+    img{
+      border-radius: 50%;
+       height: 300px;
+      width: 320px; 
+    }
+  

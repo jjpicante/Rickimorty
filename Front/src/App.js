@@ -5,9 +5,10 @@ import Nav from './components/Nav/Nav'
 import CartaCreador from './components/About/About'
 import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
-import styles from './Cartas.module.css'
 import { useState, useEffect } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import Favorites from './components/Favorites/Favorites'
+
 
 function App () {
   const location = useLocation();
@@ -51,6 +52,7 @@ return (
       <Route path= "/home" element={<Cards characters={characters} onClose= {onClose}/>}   />
       <Route path= "/about" element= {<CartaCreador/>} />
       <Route path= "/detail/:id" element = {<Detail/>}  />
+      <Route path='/favorites' element= {<Favorites/>} />
     </Routes>
   </div>
     )
