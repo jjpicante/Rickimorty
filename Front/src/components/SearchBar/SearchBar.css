@@ -1,0 +1,23 @@
+.buscador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+border-radius: 20px;
+width: 100px;
+margin-bottom: 10px;
+}
+
+.boton{
+border-radius: 20px;
+width: 80px;
+font-weight: bolder;
+font-family: cursive;
+cursor: pointer;
+}
+
+.boton:hover{
+    color: grey;
+}
