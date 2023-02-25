@@ -3,6 +3,9 @@
    background-image: url(https://images3.alphacoders.com/812/812062.png);
    background-size:contain;
    min-height: 100vh;
+   padding: 25px;
+   display: flex;
+   
 
    
    

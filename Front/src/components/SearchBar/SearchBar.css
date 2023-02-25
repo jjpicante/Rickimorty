@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:flex-end;
+    float: right
 }
 
 .input{
 border-radius: 20px;
 width: 100px;
 margin-bottom: 10px;
+float:right
 }
 
 .boton{
@@ -16,6 +19,7 @@ width: 80px;
 font-weight: bolder;
 font-family: cursive;
 cursor: pointer;
+float: right
 }
 
 .boton:hover{

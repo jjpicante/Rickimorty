@@ -1,3 +1,15 @@
+
+.nav{
+    height: 40px;
+    width: 100%;
+    background-color: #000000;
+    padding: 25px; 
+    border-radius: 20px;
+   
+}
+
+
+
 .botones{
     float:left;
     margin: 0px 20px 0px 20px;

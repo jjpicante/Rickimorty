@@ -10,7 +10,6 @@ const Favorites = () => {
       {myFavorites.map((character) => {
         return (
           <div className={style.cardsindiv}>
-         
             <h2 className={style.name}>{character.name}</h2>
             <h2>{character.species}</h2>
             <h2>{character.gender}</h2>
@@ -25,3 +24,4 @@ const Favorites = () => {
 };
 
 export default Favorites;
+         

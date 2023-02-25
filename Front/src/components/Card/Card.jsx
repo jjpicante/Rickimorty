@@ -30,9 +30,9 @@ export default function Card({ name, species, gender, image, onClose, id }) {
   return (
     <div className={style.cardsindiv}>
       {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
+        <p className={style.corazon} onClick={handleFavorite}>❤️</p>
       ) : (
-        <button onClick={handleFavorite}>🤍</button>
+        <p className={style.corazon} onClick={handleFavorite}>🤍</p>
       )}
       <button onClick={onClose} className={style.btn}>
         X

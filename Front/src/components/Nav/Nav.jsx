@@ -7,7 +7,7 @@ import style from "./Nav.module.css"
 
 export default function Nav(props){
     return (
-        <div style={{backgroundColor: '#000000', padding: '25px', borderRadius: '20px'}}>
+        <div className={style.nav}>
            <NavLink to="/home" className={style.botones}>
            <span>Home</span>
            </NavLink>

@@ -11,22 +11,27 @@
     padding: 0px;
     margin-bottom: 4em;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    height: 600px;
     align-items:center;
     flex-direction: row;
     justify-content: center;
+    overflow: hidden;
     
     }
+  
+  
 
     .cardsindiv{
+      position: relative;
       margin: 50px;
       border: solid 2px black;
       border-radius: 20px;
       background-color: rgb(75, 32, 149);
       height: 500px;
       width: 330px;
-      
-      ;
-      
+ 
     }
     .btn{
       background: #e030a8;
@@ -37,6 +42,16 @@
     .btn:hover{
       background-color: #e6a2d0;
     }
+
+    .corazon{
+      float:left;
+      position:absolute;
+      top: 0px;
+      left: 10px;
+      cursor: pointer;
+      
+    }
+
     .cardsindiv:hover{
       background-color: #262623c9;
     color: beige;
