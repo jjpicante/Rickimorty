@@ -1,7 +1,8 @@
-import { ADD_FAVORITE, DELETE_FAVORITE } from "./Actions.types";
+import { ADD_FAVORITE, DELETE_FAVORITE, FILTER_CARDS, ORDER_CARDS } from "./Actions.types";
 
 const initialState = {
-    myFavorites: []
+    myFavorites: [],
+    allCharacters: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -9,14 +10,29 @@ const reducer = (state = initialState, action) => {
         case ADD_FAVORITE:
             return {
                 ...state,
-                myFavorites: [...state.myFavorites, action.payload]
+                myFavorites: [...state.allCharacters, action.payload],
+                allCharacters: [...state.myFavorites]
             }
         case DELETE_FAVORITE:
             return {
                 ...state,
                 myFavorites: state.myFavorites.filter(char => char.id !== action.payload)
             }
-
+        case FILTER_CARDS:
+            const { allCharacters } = state
+            const allCharactersFilter = allCharacters.filter(char => char.gender === action.payload)
+            return {
+                ...state,
+                myFavorites: allCharactersFilter
+            }
+        case ORDER_CARDS:
+            return {
+                ...state,
+                myFavorites:
+                    action.payload === "Ascendente"
+                        ? allCharacters.sort((a, b) => a.id < b.id)
+                        : allCharacters.sort((a, b) => a.id > b.id)
+            }
         default:
             return { ...state }
     }
@@ -24,3 +40,5 @@ const reducer = (state = initialState, action) => {
 
 
 export default reducer;
+
+

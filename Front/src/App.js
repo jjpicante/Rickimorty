@@ -31,7 +31,7 @@ function App () {
   const [characters, setCharacters] = useState([])
 
   const onSearch=(buscar)=>{
-    fetch(`https://rickandmortyapi.com/api/character/${buscar}`)
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${buscar}`)
     .then((response) => response.json())
     .then((data) => {
        if (data.name) {

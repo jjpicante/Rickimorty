@@ -6,7 +6,21 @@ const Favorites = () => {
   const { myFavorites } = useSelector((state) => state);
 
   return (
-    <div className={style.cartas}>
+      
+    <div>
+      <div>
+        <select name="" id="">
+          <option value="Ascendente"></option>
+          <option value="Descendente"></option>
+          </select>
+          <select name="" id="">
+          <option value="Male"></option>
+          <option value="Female"></option>
+          <option value="Unknown"></option>
+          <option value="Genderless"></option>
+          </select>
+      </div>
+
       {myFavorites.map((character) => {
         return (
           <div className={style.cardsindiv}>
