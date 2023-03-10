@@ -5,17 +5,25 @@ h2{
     width: 200px;
     margin-left: 65px;
     }
-    
+
+  .containercartas{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+  }
+
   
-  .cartas{
+  /* .cartas{
     padding: 0px;
     margin-bottom: 4em;
     display: flex;
     align-items:center;
     flex-direction: row;
     justify-content: center;
+     
     
-    }
+    }*/
 
     .cardsindiv{
       margin: 50px;
@@ -24,11 +32,9 @@ h2{
       background-color: rgb(75, 32, 149);
       height: 500px;
       width: 330px;
-      
-      ;
-      
-    }
-    .btn{
+     }
+    
+     .btn{
       background: #e030a8;
       cursor: pointer;
       border-radius: 50%

@@ -10,16 +10,17 @@ const reducer = (state = initialState, action) => {
         case ADD_FAVORITE:
             return {
                 ...state,
-                myFavorites: [...state.myFavorites, action.payload],
+                myFavorites: [...state.allCharacters, action.payload],
+                allCharacters: [...state.allCharacters, action.payload]
             }
         case DELETE_FAVORITE:
             return {
                 ...state,
-                myFavorites: state.myFavorites.filter(char => char.id !== action.payload)
+                myFavorites: state.myFavorites.filter(e => e.id !== action.payload)
             }
         case FILTER_CARDS:
-            const { allCharacters } = state
-            const allCharactersFilter = allCharacters.filter(char => char.gender === action.payload)
+            
+            const allCharactersFilter = state.allCharacters.filter(e => e.gender === action.payload)
             return {
                 ...state,
                 myFavorites: allCharactersFilter
@@ -29,8 +30,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 myFavorites:
                     action.payload === "Ascendente"
-                        ? allCharacters.sort((a, b) => a.id < b.id)
-                        : allCharacters.sort((a, b) => a.id > b.id)
+                        ? state.allCharacters.sort((a, b) => a.id - b.id)
+                        : state.allCharacters.sort((a, b) => b.id - a.id)
             }
         default:
             return { ...state }
