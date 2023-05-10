@@ -5,7 +5,7 @@ Proyecto realizado durante la cursada en el bootcamp SoyHenry, es una pagina ful
 
 Instalación
 
-Para podes visualizarlo necesitas:
+Para poder visualizarlo necesitas:
 
 1- Forkear el repositorio.
 
