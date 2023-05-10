@@ -1,6 +1,6 @@
 Rick and Morty
 
-Proyecto realizado durante la cursada en el bootcamp SoyHenry, es una pagina fullstack muy sensilla donde se utiliza la API de rick and morty.
+Proyecto realizado durante la cursada en el bootcamp SoyHenry, es una pagina fullstack muy sencilla donde se utiliza la API de rick and morty.
 
 
 Instalación
