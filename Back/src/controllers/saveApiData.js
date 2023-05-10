@@ -3,9 +3,6 @@ let URL = "https://rickandmortyapi.com/api/character";
 
 async function getApiData() {
   try {
-
-
-
     let characters = [];
     for (let i = 0; i < 5; i++) {
       const result = await axios(URL);
@@ -13,8 +10,6 @@ async function getApiData() {
       characters.push(...personajes);
       URL = result.data.info.next;
     }
-
-    console.log("before format");
     const format = characters.map((pj) => {
       console.log(pj);
       return {
@@ -34,3 +29,8 @@ async function getApiData() {
 }
 
 module.exports = { getApiData };
+
+
+
+
+    

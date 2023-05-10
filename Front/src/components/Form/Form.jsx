@@ -34,7 +34,7 @@ const Form = ({ login }) => {
        return(
            <div>
            <form onClick={handleSubmit}>
-               <label htmlFor="username">Usuername</label>
+               <label htmlFor="username">Username</label>
                <input type="text" name='username' value={userData.username} onChange={handleInputChange}/>
                {errors.username && <p style={{color:'red', fontWeight: 'bolder'}}>{errors.username}</p>}
                <label htmlFor="password">Password</label>
