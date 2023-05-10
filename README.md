@@ -1,7 +1,7 @@
 Rick and Morty
 
-
 Proyecto realizado durante la cursada en el bootcamp SoyHenry, es una pagina fullstack muy sensilla donde se utiliza la API de rick and morty.
+
 
 Instalación
 
@@ -14,6 +14,7 @@ Para poder visualizarlo necesitas:
 3- Ejecutar el comando "npm start" en la carpeta Back.
 
 4- Ejecutar el comando "npm start" en la carpeta Front.
+
 
 Uso
 
